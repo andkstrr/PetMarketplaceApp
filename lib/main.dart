@@ -1,5 +1,5 @@
 import "package:flutter/material.dart";
-import 'package:pet_marketplace_app/welcome.dart';
+import 'package:pet_marketplace_app/pages/welcome.dart';
 
 void main() => runApp(MaterialApp(
   home: PetMarketplaceApp(),

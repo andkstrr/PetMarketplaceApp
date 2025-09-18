@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:pet_marketplace_app/pages/home.dart';
 
 class WelcomePage extends StatelessWidget {
   const WelcomePage({super.key});
@@ -41,34 +42,40 @@ class WelcomePage extends StatelessWidget {
               ),
               child: Column(
                 children: [
-                  Padding(
-                    padding: const EdgeInsets.symmetric(horizontal: 65, vertical: 20),
-                    child: Column(
-                      children: [
-                        Text(
+                  Column(
+                    children: [
+                      Padding(
+                        padding: const EdgeInsets.symmetric(horizontal: 40, vertical: 10),
+                        child: Text(
                           "Find your best friend with us",
                           textAlign: TextAlign.center,
                           style: GoogleFonts.poppins(
                             fontSize: 30,
-                            fontWeight: FontWeight.w700  
+                            fontWeight: FontWeight.w600  
                           ),
                         ),
-                        const SizedBox(height: 25),
-                        Text(
+                      ),
+                      const SizedBox(height: 15),
+                      Padding(
+                        padding: const EdgeInsets.symmetric(horizontal: 70),
+                        child: Text(
                           "Join us and discover the best pet in your location",
                           textAlign: TextAlign.center,
                           style: GoogleFonts.poppins(
                             fontSize: 15,
                             fontWeight: FontWeight.w500
                           ),
-                        )
-                      ],
-                    ),
+                        ),
+                      )
+                    ],
                   ),
-                  const SizedBox(height: 10),
+                  const SizedBox(height: 35),
                   ElevatedButton(
                     onPressed: () {
-                      
+                      Navigator.push(
+                        context, 
+                        MaterialPageRoute (builder: (context) => const HomePage())
+                      );
                     },
                     style: ElevatedButton.styleFrom(
                       backgroundColor: Colors.black87,
@@ -78,7 +85,7 @@ class WelcomePage extends StatelessWidget {
                       "Get Started",
                       style: GoogleFonts.poppins(
                         fontSize: 15,
-                        fontWeight: FontWeight.w500,
+                        fontWeight: FontWeight.w600,
                         color: Colors.white
                       ),
                     ),
