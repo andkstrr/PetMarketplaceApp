@@ -12,12 +12,13 @@ class WelcomePage extends StatelessWidget {
       body: Column(
         mainAxisAlignment: MainAxisAlignment.start,
         children: [
+          const SizedBox(height: 200),
           Expanded(
-            // flex: 2,
+            // flex: 1,
             child: Center(
               child: Container(
-                height: double.infinity,
-                width: 480,
+                // height: 700,
+                // width: 500,
                 decoration: const BoxDecoration(
                   image: DecorationImage(
                     image: AssetImage("assets/images/welcome.png"),
@@ -28,7 +29,7 @@ class WelcomePage extends StatelessWidget {
             ),
           ),
           Expanded(
-            // flex: 1,
+            flex: 1,
             child: Container(
               padding: const EdgeInsets.symmetric(horizontal: 30, vertical: 20),
               height: 400,
